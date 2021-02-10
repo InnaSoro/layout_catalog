@@ -42,6 +42,10 @@ html {
   line-height: 60px;
 }
 
+.nav__item:last-child {
+  margin: 0;
+}
+
 .nav__link {
   display: block;
   box-sizing: border-box;
@@ -49,10 +53,14 @@ html {
   text-decoration: none;
   text-transform: uppercase;
   color: black;
+  transition: color 0.5s;
 }
 
-.is-active,
 .nav__link:hover {
+  color: #00acdc;
+}
+
+.is-active {
   color: #00acdc;
 }
 
@@ -65,10 +73,6 @@ html {
   height: 4px;
   background: #00acdc;
   border-radius: 8px;
-}
-
-.nav__item:last-child {
-  margin: 0;
 }
 
 .card {
@@ -89,10 +93,18 @@ html {
 }
 
 .card__img {
-  width: 160px;
-  height: 134px;
-  margin: 15px 0;
-  padding: 0 4px;
+  box-sizing: border-box;
+  width: 168px;
+  height: 164px;
+  margin: 0;
+  padding: 15px 4px;
+  border: 3px solid transparent;
+  transition: transform 1s;
+}
+
+.card__img:hover {
+  border: 3px solid #f3f3f3;
+  transform: scale(1.2);
 }
 
 .card__title {
@@ -122,13 +134,13 @@ html {
   height: 15px;
 }
 
-.star {
+.card__star {
   background: url(/images/star-active.svg) center no-repeat;
   margin-right: 4px;
   width: 15px;
 }
 
-.disabled {
+.card__star:nth-child(n+5) {
   background: url(/images/star.svg) center no-repeat;
   margin-right: 4px;
   width: 15px;
@@ -174,6 +186,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: background-color 0.5s, color 0.5s;
 }
 
 .card__button:hover {
@@ -182,15 +195,14 @@ html {
 }
 
 .main {
-  width: 100%;
-  max-width: 944px;
+  display: flex;
+  justify-content: center;
   margin: 50px auto 0;
   padding: 0 40px;
 }
 
 .container {
-  height: 856px;
-  width: 944px;
+  max-width: 944px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;

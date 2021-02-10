@@ -15,10 +15,17 @@
 }
 
 .card__img {
-  width: 160px;
-  height: 134px;
-  margin: 15px 0;
-  padding: 0 4px;
+  box-sizing: border-box;
+  width: 168px;
+  height: 164px;
+  margin: 0;
+  padding: 15px 4px;
+  border: 3px solid transparent;
+  transition: transform 1s;
+  &:hover {
+    border: 3px solid #f3f3f3;
+    transform: scale(1.2);
+  }
 }
 
 .card__title {
@@ -99,9 +106,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.card__button:hover {
-  background-color: white;
-  color: #00acdc;
+  transition: background-color 0.5s, color 0.5s;
+  &:hover {
+    background-color: white;
+    color: #00acdc;
+  }
 }
