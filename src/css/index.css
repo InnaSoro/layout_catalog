@@ -8,19 +8,30 @@ html {
   font-size: 12px;
 }
 
+.main {
+  display: flex;
+  justify-content: center;
+  margin: 50px auto 0;
+  padding: 0 40px;
+}
+
+.main__container {
+  max-width: 944px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-right: 0;
+}
+
 .header {
   position: relative;
   top: 0;
-  height: 60px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-}
-
-.nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 60px;
   padding: 0 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .nav {
@@ -194,19 +205,4 @@ html {
   color: #00acdc;
 }
 
-.main {
-  display: flex;
-  justify-content: center;
-  margin: 50px auto 0;
-  padding: 0 40px;
-}
-
-.container {
-  max-width: 944px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-right: 0;
-}
-
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=index.css.map */
