@@ -1,16 +1,15 @@
 .main {
-  display: flex;
+  display: grid;
   justify-content: center;
-  margin: 50px auto 0;
-  padding: 0 40px;
+  grid-template-columns: repeat(auto-fill, 200px);
+  grid-gap: 50px 48px;
+  margin: 50px 40px;
 }
 
-.main__container {
-  max-width: 944px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-right: 0;
+@media (min-width: 1024px) {
+  .main {
+    grid-template-columns: repeat(4, 200px);
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
